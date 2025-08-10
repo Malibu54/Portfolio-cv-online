@@ -1,0 +1,1474 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oriana Galindez - Analista Funcional & Product Manager</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #6366f1;
+            --secondary: #8b5cf6;
+            --accent: #06b6d4;
+            --dark: #1e1b4b;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: linear-gradient(135deg, var(--light) 0%, #e2e8f0 100%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 50%, var(--accent) 100%);
+            color: var(--white);
+            padding: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, var(--accent), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            font-size: 60px;
+            color: var(--white);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .name {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .title {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 24px;
+            background: rgba(255,255,255,0.1);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 50px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        /* Navigation */
+        .nav {
+            position: sticky;
+            top: 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: center;
+            padding: 15px 0;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-link {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        /* Sections */
+        .section {
+            padding: 80px 0;
+            position: relative;
+        }
+
+        .section:nth-child(even) {
+            background: var(--white);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 50px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Experience */
+        .experience-item {
+            background: var(--white);
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-left: 5px solid var(--primary);
+            transition: all 0.3s ease;
+        }
+
+        .experience-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .job-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--dark);
+            flex: 1;
+        }
+
+        .job-company {
+            font-size: 1.1rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .job-period {
+            color: var(--gray);
+            font-weight: 500;
+            padding: 5px 15px;
+            background: var(--light);
+            border-radius: 20px;
+        }
+
+        .job-description {
+            margin-top: 15px;
+        }
+
+        .job-description ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .job-description li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+            color: var(--gray);
+        }
+
+        .job-description li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-size: 0.8rem;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .skill-category {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .skill-category h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            color: var(--white);
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Education */
+        .education-item {
+            background: var(--white);
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-left: 5px solid var(--accent);
+        }
+
+        .education-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        .education-institution {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .education-period {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* Languages */
+        .languages {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .language-item {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .language-item:hover {
+            transform: translateY(-3px);
+        }
+
+        .language-name {
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        .language-level {
+            color: var(--gray);
+            padding: 5px 15px;
+            background: var(--light);
+            border-radius: 15px;
+            font-size: 0.9rem;
+        }
+
+        /* Certifications */
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .certification-item {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border-left: 4px solid var(--primary);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .certification-item.featured {
+            border-left: 4px solid var(--accent);
+            background: linear-gradient(135deg, var(--white) 0%, #f0f9ff 100%);
+        }
+
+        .certification-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .cert-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .cert-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .certification-item.featured .cert-icon {
+            background: linear-gradient(45deg, var(--accent), var(--primary));
+        }
+
+        .cert-info {
+            flex: 1;
+        }
+
+        .cert-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+
+        .cert-issuer {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .cert-date {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .cert-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: var(--accent);
+            font-size: 1.2rem;
+            opacity: 0.3;
+        }
+
+        .certification-item.featured .cert-badge {
+            color: var(--accent);
+            opacity: 0.6;
+        }
+
+        .cert-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .cert-skills .skill-tag {
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            color: var(--white);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .certification-item.featured .cert-skills .skill-tag {
+            background: linear-gradient(45deg, var(--accent), var(--primary));
+        }
+
+        /* Specializations */
+        .specializations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .specialization-item {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .specialization-item.academic {
+            border-left: 5px solid #dc2626;
+            background: linear-gradient(135deg, var(--white) 0%, #fef2f2 100%);
+        }
+
+        .specialization-item.diploma {
+            border-left: 5px solid #059669;
+            background: linear-gradient(135deg, var(--white) 0%, #f0fdf4 100%);
+        }
+
+        .specialization-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.18);
+        }
+
+        .spec-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .spec-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .specialization-item.academic .spec-icon {
+            background: linear-gradient(45deg, #dc2626, #ef4444);
+        }
+
+        .specialization-item.diploma .spec-icon {
+            background: linear-gradient(45deg, #059669, #10b981);
+        }
+
+        .spec-info {
+            flex: 1;
+        }
+
+        .spec-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+
+        .spec-field {
+            color: var(--primary);
+            font-weight: 600;
+            font-style: italic;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        .spec-institution {
+            color: var(--gray);
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .spec-date {
+            color: var(--gray);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .academic-badge, .diploma-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 1.4rem;
+            opacity: 0.4;
+        }
+
+        .academic-badge {
+            color: #dc2626;
+        }
+
+        .diploma-badge {
+            color: #059669;
+        }
+
+        .spec-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .spec-skills .academic-tag {
+            background: linear-gradient(45deg, #dc2626, #ef4444);
+            color: var(--white);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .spec-skills .diploma-tag {
+            background: linear-gradient(45deg, #059669, #10b981);
+            color: var(--white);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* Contact */
+        .contact-info {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .contact-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            color: var(--white);
+            text-decoration: none;
+            padding: 20px;
+            border-radius: 15px;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .contact-link:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-3px);
+        }
+
+        .contact-link i {
+            font-size: 2rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .name {
+                font-size: 2rem;
+            }
+            
+            .title {
+                font-size: 1.2rem;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .job-header {
+                flex-direction: column;
+            }
+            
+            .social-links {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .contact-links {
+                flex-direction: column;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .experience-item, .skill-category, .education-item {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="profile-img">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <h1 class="name">Oriana Galindez</h1>
+                <p class="title">Business Process Consultant | Technical Product Manager | Analista Funcional</p>
+                
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                        LinkedIn
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-github"></i>
+                        GitHub
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fas fa-globe"></i>
+                        Portfolio
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <ul class="nav-links">
+                    <li><a href="#experiencia" class="nav-link">Experiencia</a></li>
+                    <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
+                    <li><a href="#educacion" class="nav-link">Educación</a></li>
+                    <li><a href="#especializaciones" class="nav-link">Especializaciones</a></li>
+                    <li><a href="#certificaciones" class="nav-link">Certificaciones</a></li>
+                    <li><a href="#idiomas" class="nav-link">Idiomas</a></li>
+                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Experience Section -->
+    <section id="experiencia" class="section">
+        <div class="container">
+            <h2 class="section-title">Experiencia Profesional</h2>
+            
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <h3 class="job-title">Docente</h3>
+                        <p class="job-company">YPF | Argentina</p>
+                    </div>
+                    <span class="job-period">Ago 2025 - Actualidad</span>
+                </div>
+                <div class="job-description">
+                    <p><strong>Programa:</strong> Bootcamp "Mujeres en Tecnología YPF" - Ofimática Microsoft</p>
+                    <ul>
+                        <li>Análisis y documentación del progreso de estudiantes para identificar oportunidades de mejora</li>
+                        <li>Adaptación de técnicas de estudio según necesidades individuales de aprendizaje</li>
+                        <li>Colaboración en diseño y mejora de materiales pedagógicos</li>
+                        <li>Capacitación en herramientas Microsoft para profesionales en transición tecnológica</li>
+                    </ul>
+                    <div style="margin-top: 15px;">
+                        <strong>Tecnologías clave:</strong>
+                        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px;">
+                            <span style="background: linear-gradient(45deg, #6366f1, #8b5cf6); color: white; padding: 4px 10px; border-radius: 15px; font-size: 0.8rem;">Power BI</span>
+                            <span style="background: linear-gradient(45deg, #6366f1, #8b5cf6); color: white; padding: 4px 10px; border-radius: 15px; font-size: 0.8rem;">Power Platform</span>
+                            <span style="background: linear-gradient(45deg, #6366f1, #8b5cf6); color: white; padding: 4px 10px; border-radius: 15px; font-size: 0.8rem;">Power Automate</span>
+                            <span style="background: linear-gradient(45deg, #6366f1, #8b5cf6); color: white; padding: 4px 10px; border-radius: 15px; font-size: 0.8rem;">Power Query</span>
+                            <span style="background: linear-gradient(45deg, #6366f1, #8b5cf6); color: white; padding: 4px 10px; border-radius: 15px; font-size: 0.8rem;">Microsoft Office</span>
+                            <span style="background: linear-gradient(45deg, #6366f1, #8b5cf6); color: white; padding: 4px 10px; border-radius: 15px; font-size: 0.8rem;">Microsoft Copilot</span>
+                            <span style="background: linear-gradient(45deg, #6366f1, #8b5cf6); color: white; padding: 4px 10px; border-radius: 15px; font-size: 0.8rem;">Business Analytics</span>
+                            <span style="background: linear-gradient(45deg, #6366f1, #8b5cf6); color: white; padding: 4px 10px; border-radius: 15px; font-size: 0.8rem;">NoSQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <h3 class="job-title">Business Process Consultant</h3>
+                        <p class="job-company">Neuromna | Argentina</p>
+                    </div>
+                    <span class="job-period">Sep 2022 - Presente</span>
+                </div>
+                <div class="job-description">
+                    <ul>
+                        <li>Gestión de incidencias y seguimiento de procesos mediante herramientas como ServiceNow y Jira</li>
+                        <li>Identificación, priorización y liderazgo de proyectos de mejora de procesos transversales</li>
+                        <li>Desarrollo e implementación de nuevas capacidades en áreas cliente</li>
+                        <li>Elaboración de documentación técnica y diagramas BPM para estandarización de procesos</li>
+                    </ul>
+                    <div style="margin-top: 15px;">
+                        <strong>Tecnologías clave:</strong>
+                        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px;">
+                            <span style="background: linear-gradient(45deg, #6366f1, #8b5cf6); color: white; padding: 4px 10px; border-radius: 15px; font-size: 0.8rem;">ServiceNow</span>
+                            <span style="background: linear-gradient(45deg, #6366f1, #8b5cf6); color: white; padding: 4px 10px; border-radius: 15px; font-size: 0.8rem;">Jira</span>
+                            <span style="background: linear-gradient(45deg, #6366f1, #8b5cf6); color: white; padding: 4px 10px; border-radius: 15px; font-size: 0.8rem;">BPM</span>
+                            <span style="background: linear-gradient(45deg, #6366f1, #8b5cf6); color: white; padding: 4px 10px; border-radius: 15px; font-size: 0.8rem;">Process Improvement</span>
+                            <span style="background: linear-gradient(45deg, #6366f1, #8b5cf6); color: white; padding: 4px 10px; border-radius: 15px; font-size: 0.8rem;">Documentación Técnica</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <h3 class="job-title">Docente</h3>
+                        <p class="job-company">Coderhouse | Argentina</p>
+                    </div>
+                    <span class="job-period">Sep 2022 - Jul 2025</span>
+                </div>
+                <div class="job-description">
+                    <p><strong>Comisiones:</strong> Business Analytics, Excel Intermedio y Avanzado, Data Science I: Fundamentos para la Ciencia de Datos</p>
+                    <ul>
+                        <li>Análisis y documentación del progreso de estudiantes para identificar oportunidades de mejora</li>
+                        <li>Adaptación de técnicas de estudio según necesidades individuales de aprendizaje</li>
+                        <li>Colaboración en diseño y mejora de materiales pedagógicos</li>
+                    </ul>
+                    <div style="margin-top: 15px;">
+                        <strong>Tecnologías clave:</strong>
+                        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px;">
+                            <span style="background: linear-gradient(45deg, #6366f1, #8b5cf6); color: white; padding: 4px 10px; border-radius: 15px; font-size: 0.8rem;">Excel Avanzado</span>
+                            <span style="background: linear-gradient(45deg, #6366f1, #8b5cf6); color: white; padding: 4px 10px; border-radius: 15px; font-size: 0.8rem;">Python</span>
+                            <span style="background: linear-gradient(45deg, #6366f1, #8b5cf6); color: white; padding: 4px 10px; border-radius: 15px; font-size: 0.8rem;">Data Science</span>
+                            <span style="background: linear-gradient(45deg, #6366f1, #8b5cf6); color: white; padding: 4px 10px; border-radius: 15px; font-size: 0.8rem;">Business Analytics</span>
+                            <span style="background: linear-gradient(45deg, #6366f1, #8b5cf6); color: white; padding: 4px 10px; border-radius: 15px; font-size: 0.8rem;">Modelos Predictivos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <h3 class="job-title">Technical Product Manager</h3>
+                        <p class="job-company">Grant Thornton Argentina | Argentina</p>
+                    </div>
+                    <span class="job-period">Sep 2023 - May 2025</span>
+                </div>
+                <div class="job-description">
+                    <ul>
+                        <li>Relevamiento y análisis de requerimientos con las Divisiones para nuevos desarrollos</li>
+                        <li>Desarrollo de soluciones en Power Platform (Power Apps y Power Automate)</li>
+                        <li>Elaboración de prototipos funcionales y documentación técnica</li>
+                        <li>Análisis de datos mediante consultas SQL, scripts de Python y automatizaciones VBA</li>
+                        <li>Capacitaciones in-company de ofimática para usuarios corporativos</li>
+                        <li>Coordinación con proveedores externos actuando como puente entre áreas</li>
+                    </ul>
+                    <div style="margin-top: 15px;">
+                        <strong>Tecnologías clave:</strong>
+                        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px;">
+                            <span style="background: linear-gradient(45deg, #6366f1, #8b5cf6); color: white; padding: 4px 10px; border-radius: 15px; font-size: 0.8rem;">Power Platform</span>
+                            <span style="background: linear-gradient(45deg, #6366f1, #8b5cf6); color: white; padding: 4px 10px; border-radius: 15px; font-size: 0.8rem;">Power Apps</span>
+                            <span style="background: linear-gradient(45deg, #6366f1, #8b5cf6); color: white; padding: 4px 10px; border-radius: 15px; font-size: 0.8rem;">Power Automate</span>
+                            <span style="background: linear-gradient(45deg, #6366f1, #8b5cf6); color: white; padding: 4px 10px; border-radius: 15px; font-size: 0.8rem;">SQL</span>
+                            <span style="background: linear-gradient(45deg, #6366f1, #8b5cf6); color: white; padding: 4px 10px; border-radius: 15px; font-size: 0.8rem;">Python</span>
+                            <span style="background: linear-gradient(45deg, #6366f1, #8b5cf6); color: white; padding: 4px 10px; border-radius: 15px; font-size: 0.8rem;">VBA</span>
+                            <span style="background: linear-gradient(45deg, #6366f1, #8b5cf6); color: white; padding: 4px 10px; border-radius: 15px; font-size: 0.8rem;">QA Testing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <h3 class="job-title">Analista Funcional</h3>
+                        <p class="job-company">Errepar | Argentina</p>
+                    </div>
+                    <span class="job-period">Feb 2022 - Ago 2023</span>
+                </div>
+                <div class="job-description">
+                    <ul>
+                        <li>Elaboración de documentación técnica y funcional utilizando Figma</li>
+                        <li>Gestión de requerimientos con proveedores internos y externos</li>
+                        <li>Coordinación con equipos de UX/UI y programadores durante el ciclo de desarrollo</li>
+                        <li>Análisis y modelado de procesos de negocio</li>
+                        <li>Ejecución de pruebas funcionales y de aceptación de usuario (UAT)</li>
+                        <li>Participación activa en metodologías ágiles y ceremonias de scrum</li>
+                    </ul>
+                    <p><strong>Proyectos destacados:</strong> Mi estudio, Portal Errepar</p>
+                    <div style="margin-top: 15px;">
+                        <strong>Tecnologías clave:</strong>
+                        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px;">
+                            <span style="background: linear-gradient(45deg, #6366f1, #8b5cf6); color: white; padding: 4px 10px; border-radius: 15px; font-size: 0.8rem;">Figma</span>
+                            <span style="background: linear-gradient(45deg, #6366f1, #8b5cf6); color: white; padding: 4px 10px; border-radius: 15px; font-size: 0.8rem;">Scrum</span>
+                            <span style="background: linear-gradient(45deg, #6366f1, #8b5cf6); color: white; padding: 4px 10px; border-radius: 15px; font-size: 0.8rem;">UAT Testing</span>
+                            <span style="background: linear-gradient(45deg, #6366f1, #8b5cf6); color: white; padding: 4px 10px; border-radius: 15px; font-size: 0.8rem;">UX/UI</span>
+                            <span style="background: linear-gradient(45deg, #6366f1, #8b5cf6); color: white; padding: 4px 10px; border-radius: 15px; font-size: 0.8rem;">Análisis Funcional</span>
+                            <span style="background: linear-gradient(45deg, #6366f1, #8b5cf6); color: white; padding: 4px 10px; border-radius: 15px; font-size: 0.8rem;">BPM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <h3 class="job-title">Analista Funcional de Implementación</h3>
+                        <p class="job-company">MG Intelligence S.R.L | Argentina</p>
+                    </div>
+                    <span class="job-period">Oct 2021 - Feb 2022</span>
+                </div>
+                <div class="job-description">
+                    <ul>
+                        <li>Relevamiento, análisis y documentación de procesos comerciales y operativos</li>
+                        <li>Identificación de mejoras y diseño de soluciones funcionales escalables</li>
+                        <li>Redacción de especificaciones funcionales y documentación técnica</li>
+                        <li>Diseño y ejecución de pruebas funcionales y coordinación de pruebas UAT</li>
+                        <li>Participación en la priorización del backlog y definición de roadmap</li>
+                    </ul>
+                    <p><strong>Proyectos destacados:</strong> ERP 'Totvs Protheus' - Proyectos nacionales e internacionales (Panalab Argentina, Coppel México)</p>
+                    <div style="margin-top: 15px;">
+                        <strong>Tecnologías clave:</strong>
+                        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px;">
+                            <span style="background: linear-gradient(45deg, #6366f1, #8b5cf6); color: white; padding: 4px 10px; border-radius: 15px; font-size: 0.8rem;">Totvs Protheus</span>
+                            <span style="background: linear-gradient(45deg, #6366f1, #8b5cf6); color: white; padding: 4px 10px; border-radius: 15px; font-size: 0.8rem;">ERP Implementation</span>
+                            <span style="background: linear-gradient(45deg, #6366f1, #8b5cf6); color: white; padding: 4px 10px; border-radius: 15px; font-size: 0.8rem;">UAT Testing</span>
+                            <span style="background: linear-gradient(45deg, #6366f1, #8b5cf6); color: white; padding: 4px 10px; border-radius: 15px; font-size: 0.8rem;">Análisis Funcional</span>
+                            <span style="background: linear-gradient(45deg, #6366f1, #8b5cf6); color: white; padding: 4px 10px; border-radius: 15px; font-size: 0.8rem;">Backlog Management</span>
+                            <span style="background: linear-gradient(45deg, #6366f1, #8b5cf6); color: white; padding: 4px 10px; border-radius: 15px; font-size: 0.8rem;">Roadmap Planning</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <h3 class="job-title">Analista Impositivo</h3>
+                        <p class="job-company">Metrotel Argentina | Argentina</p>
+                    </div>
+                    <span class="job-period">Oct 2016 - Oct 2021</span>
+                </div>
+                <div class="job-description">
+                    <ul>
+                        <li>Automatización de procesos contables mediante macros y scripts VBA</li>
+                        <li>Extracción y transformación de datos desde ERP usando Power Query</li>
+                        <li>Análisis de datos en Excel para reportes gerenciales y cierres contables</li>
+                        <li>Optimización de conciliaciones a través de soluciones automatizadas</li>
+                        <li>Gestión de sistemas ERP (Pectra) y aplicativos web AFIP</li>
+                    </ul>
+                    <div style="margin-top: 15px;">
+                        <strong>Tecnologías clave:</strong>
+                        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px;">
+                            <span style="background: linear-gradient(45deg, #059669, #10b981); color: white; padding: 4px 10px; border-radius: 15px; font-size: 0.8rem;">ETL</span>
+                            <span style="background: linear-gradient(45deg, #059669, #10b981); color: white; padding: 4px 10px; border-radius: 15px; font-size: 0.8rem;">Power Query</span>
+                            <span style="background: linear-gradient(45deg, #059669, #10b981); color: white; padding: 4px 10px; border-radius: 15px; font-size: 0.8rem;">VBA</span>
+                            <span style="background: linear-gradient(45deg, #059669, #10b981); color: white; padding: 4px 10px; border-radius: 15px; font-size: 0.8rem;">ERP Pectra</span>
+                            <span style="background: linear-gradient(45deg, #059669, #10b981); color: white; padding: 4px 10px; border-radius: 15px; font-size: 0.8rem;">Process Automation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="habilidades" class="section">
+        <div class="container">
+            <h2 class="section-title">Habilidades Técnicas</h2>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-project-diagram"></i> Gestión y Metodologías</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Gestión de proyectos</span>
+                        <span class="skill-tag">Jira</span>
+                        <span class="skill-tag">Trello</span>
+                        <span class="skill-tag">ClickUp</span>
+                        <span class="skill-tag">ServiceNow</span>
+                        <span class="skill-tag">Scrum</span>
+                        <span class="skill-tag">Análisis funcional</span>
+                        <span class="skill-tag">Pruebas UAT</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Herramientas Técnicas</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Microsoft 365</span>
+                        <span class="skill-tag">Excel Avanzado</span>
+                        <span class="skill-tag">Power BI</span>
+                        <span class="skill-tag">SharePoint</span>
+                        <span class="skill-tag">Visio</span>
+                        <span class="skill-tag">MS Project</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">VBA</span>
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">BPM</span>
+                        <span class="skill-tag">UML</span>
+                        <span class="skill-tag">DER</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-cloud"></i> Power Platform</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Power Apps</span>
+                        <span class="skill-tag">Power Automate</span>
+                        <span class="skill-tag">Certificación PL-200</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-server"></i> Sistemas y Plataformas</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Sistemas ERP/CRM</span>
+                        <span class="skill-tag">Totvs Protheus</span>
+                        <span class="skill-tag">Claude</span>
+                        <span class="skill-tag">Gemini</span>
+                        <span class="skill-tag">Copilot</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="educacion" class="section">
+        <div class="container">
+            <h2 class="section-title">Educación</h2>
+            
+            <div class="education-item">
+                <h3 class="education-title">Licenciatura en Administración de Sistemas</h3>
+                <p class="education-institution">Universidad de la Marina Mercante</p>
+                <p class="education-period">2021 - En Curso</p>
+            </div>
+
+            <div class="education-item">
+                <h3 class="education-title">Técnico Superior en Administración Tributaria</h3>
+                <p class="education-institution">IFTS 17</p>
+                <p class="education-period">2019 - Graduado</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specializations Section -->
+    <section id="especializaciones" class="section">
+        <div class="container">
+            <h2 class="section-title">Especializaciones Universitarias</h2>
+            
+            <div class="specializations-grid">
+                <div class="specialization-item academic">
+                    <div class="spec-header">
+                        <div class="spec-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="spec-info">
+                            <h3 class="spec-title">Experto Universitario en Liderazgo Efectivo de Personas y Equipos para Mandos Medios</h3>
+                            <p class="spec-field">Administración y gestión de empresas</p>
+                            <p class="spec-institution">Centro de e-Learning UTN FRBA</p>
+                            <p class="spec-date">2025</p>
+                        </div>
+                        <div class="academic-badge">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                    </div>
+                    <div class="spec-skills">
+                        <span class="skill-tag academic-tag">IA</span>
+                        <span class="skill-tag academic-tag">Liderazgo de equipos multidisciplinarios</span>
+                    </div>
+                </div>
+
+                <div class="specialization-item academic">
+                    <div class="spec-header">
+                        <div class="spec-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="spec-info">
+                            <h3 class="spec-title">Experto en Protección de Datos Personales</h3>
+                            <p class="spec-field">Business Administration and Management</p>
+                            <p class="spec-institution">Universidad Siglo 21</p>
+                            <p class="spec-date">2025</p>
+                        </div>
+                        <div class="academic-badge">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                    </div>
+                    <div class="spec-skills">
+                        <span class="skill-tag academic-tag">Protección de Datos</span>
+                        <span class="skill-tag academic-tag">GDPR</span>
+                        <span class="skill-tag academic-tag">Compliance</span>
+                    </div>
+                </div>
+
+                <div class="specialization-item diploma">
+                    <div class="spec-header">
+                        <div class="spec-icon">
+                            <i class="fas fa-search-dollar"></i>
+                        </div>
+                        <div class="spec-info">
+                            <h3 class="spec-title">Diplomado en Auditoría y Control Interno ISO 19011:2018</h3>
+                            <p class="spec-field">Auditoría y Control</p>
+                            <p class="spec-institution">Edutin Academy</p>
+                            <p class="spec-date">2025</p>
+                        </div>
+                        <div class="diploma-badge">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                    </div>
+                    <div class="spec-skills">
+                        <span class="skill-tag diploma-tag">Auditoría</span>
+                        <span class="skill-tag diploma-tag">Normas ISO</span>
+                        <span class="skill-tag diploma-tag">Control Interno</span>
+                    </div>
+                </div>
+
+                <div class="specialization-item diploma">
+                    <div class="spec-header">
+                        <div class="spec-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="spec-info">
+                            <h3 class="spec-title">Diplomado en Neuromarketing</h3>
+                            <p class="spec-field">Marketing</p>
+                            <p class="spec-institution">Edutin Academy</p>
+                            <p class="spec-date">2025</p>
+                        </div>
+                        <div class="diploma-badge">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                    </div>
+                    <div class="spec-skills">
+                        <span class="skill-tag diploma-tag">Marketing de productos</span>
+                        <span class="skill-tag diploma-tag">Marketing digital</span>
+                        <span class="skill-tag diploma-tag">Product Management</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certificaciones" class="section">
+        <div class="container">
+            <h2 class="section-title">Certificaciones y Licencias</h2>
+            
+            <div class="certifications-grid">
+                <div class="certification-item featured">
+                    <div class="cert-header">
+                        <div class="cert-icon">
+                            <i class="fab fa-microsoft"></i>
+                        </div>
+                        <div class="cert-info">
+                            <h3 class="cert-title">MS-PL200 Microsoft Power Platform Functional Consultant</h3>
+                            <p class="cert-issuer">IT College</p>
+                            <p class="cert-date">Abril 2025</p>
+                        </div>
+                        <div class="cert-badge">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                    </div>
+                    <div class="cert-skills">
+                        <span class="skill-tag">Microsoft Power Automate</span>
+                        <span class="skill-tag">Power BI</span>
+                        <span class="skill-tag">Power Platform</span>
+                        <span class="skill-tag">Business Analytics</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">HTML5</span>
+                    </div>
+                </div>
+
+                <div class="certification-item">
+                    <div class="cert-header">
+                        <div class="cert-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="cert-info">
+                            <h3 class="cert-title">Especialización en Comunicación Política</h3>
+                            <p class="cert-issuer">Instituto Superior de la Carrera</p>
+                            <p class="cert-date">Julio 2025</p>
+                        </div>
+                    </div>
+                    <div class="cert-skills">
+                        <span class="skill-tag">Marketing</span>
+                    </div>
+                </div>
+
+                <div class="certification-item">
+                    <div class="cert-header">
+                        <div class="cert-icon">
+                            <i class="fas fa-users-cog"></i>
+                        </div>
+                        <div class="cert-info">
+                            <h3 class="cert-title">Neuroliderazgo</h3>
+                            <p class="cert-issuer">Instituto Superior de la Carrera</p>
+                            <p class="cert-date">Julio 2025</p>
+                        </div>
+                    </div>
+                    <div class="cert-skills">
+                        <span class="skill-tag">Liderazgo de equipos</span>
+                    </div>
+                </div>
+
+                <div class="certification-item">
+                    <div class="cert-header">
+                        <div class="cert-icon">
+                            <i class="fas fa-target"></i>
+                        </div>
+                        <div class="cert-info">
+                            <h3 class="cert-title">OKR Fundamentals</h3>
+                            <p class="cert-issuer">EducacionIT</p>
+                            <p class="cert-date">Junio 2025</p>
+                        </div>
+                    </div>
+                    <div class="cert-skills">
+                        <span class="skill-tag">Product Management</span>
+                        <span class="skill-tag">Agile Methodologies</span>
+                        <span class="skill-tag">Continuous Improvement</span>
+                    </div>
+                </div>
+
+                <div class="certification-item">
+                    <div class="cert-header">
+                        <div class="cert-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="cert-info">
+                            <h3 class="cert-title">Data Science I: Fundamentos - Modelos predictivos con Python</h3>
+                            <p class="cert-issuer">Coderhouse</p>
+                            <p class="cert-date">Mayo 2024</p>
+                        </div>
+                    </div>
+                    <div class="cert-skills">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Large Language Models</span>
+                        <span class="skill-tag">IA</span>
+                        <span class="skill-tag">GitHub</span>
+                    </div>
+                </div>
+
+                <div class="certification-item">
+                    <div class="cert-header">
+                        <div class="cert-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="cert-info">
+                            <h3 class="cert-title">SQL</h3>
+                            <p class="cert-issuer">Coderhouse</p>
+                            <p class="cert-date">Septiembre 2023</p>
+                        </div>
+                    </div>
+                    <div class="cert-skills">
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">GitHub</span>
+                    </div>
+                </div>
+
+                <div class="certification-item">
+                    <div class="cert-header">
+                        <div class="cert-icon">
+                            <i class="fas fa-analytics"></i>
+                        </div>
+                        <div class="cert-info">
+                            <h3 class="cert-title">Business Analytics</h3>
+                            <p class="cert-issuer">Coderhouse</p>
+                            <p class="cert-date">Julio 2023</p>
+                        </div>
+                    </div>
+                    <div class="cert-skills">
+                        <span class="skill-tag">Power BI</span>
+                        <span class="skill-tag">Power Automate</span>
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">Agile Methodologies</span>
+                    </div>
+                </div>
+
+                <div class="certification-item">
+                    <div class="cert-header">
+                        <div class="cert-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <div class="cert-info">
+                            <h3 class="cert-title">Diseño UX/UI Avanzado</h3>
+                            <p class="cert-issuer">Coderhouse</p>
+                            <p class="cert-date">Junio 2023</p>
+                        </div>
+                    </div>
+                    <div class="cert-skills">
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">Testing</span>
+                        <span class="skill-tag">QA</span>
+                        <span class="skill-tag">Jira</span>
+                        <span class="skill-tag">Marketing Digital</span>
+                    </div>
+                </div>
+
+                <div class="certification-item">
+                    <div class="cert-header">
+                        <div class="cert-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <div class="cert-info">
+                            <h3 class="cert-title">Gestión de Proyectos con Metodologías Ágiles</h3>
+                            <p class="cert-issuer">Fundación Telefónica</p>
+                            <p class="cert-date">Abril 2023</p>
+                        </div>
+                    </div>
+                    <div class="cert-skills">
+                        <span class="skill-tag">Agile Methodologies</span>
+                        <span class="skill-tag">Scrum</span>
+                        <span class="skill-tag">Liderazgo</span>
+                    </div>
+                </div>
+
+                <div class="certification-item">
+                    <div class="cert-header">
+                        <div class="cert-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <div class="cert-info">
+                            <h3 class="cert-title">Marketing Digital</h3>
+                            <p class="cert-issuer">Fundación Telefónica</p>
+                            <p class="cert-date">Enero 2022</p>
+                        </div>
+                    </div>
+                    <div class="cert-skills">
+                        <span class="skill-tag">Marketing Digital</span>
+                        <span class="skill-tag">IA</span>
+                    </div>
+                </div>
+
+                <div class="certification-item">
+                    <div class="cert-header">
+                        <div class="cert-icon">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <div class="cert-info">
+                            <h3 class="cert-title">Python</h3>
+                            <p class="cert-issuer">EducacionIT</p>
+                            <p class="cert-date">Junio 2021</p>
+                        </div>
+                    </div>
+                    <div class="cert-skills">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">GitHub</span>
+                    </div>
+                </div>
+
+                <div class="certification-item">
+                    <div class="cert-header">
+                        <div class="cert-icon">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                        <div class="cert-info">
+                            <h3 class="cert-title">Gestión de Proyectos con Scrum</h3>
+                            <p class="cert-issuer">EducacionIT</p>
+                            <p class="cert-date">Junio 2021</p>
+                        </div>
+                    </div>
+                    <div class="cert-skills">
+                        <span class="skill-tag">Scrum</span>
+                        <span class="skill-tag">Agile Methodologies</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Languages Section -->
+    <section id="idiomas" class="section">
+        <div class="container">
+            <h2 class="section-title">Idiomas</h2>
+            
+            <div class="languages">
+                <div class="language-item">
+                    <h3 class="language-name">Inglés</h3>
+                    <span class="language-level">Upper Intermediate</span>
+                </div>
+                
+                <div class="language-item">
+                    <h3 class="language-name">Francés</h3>
+                    <span class="language-level">A2</span>
+                </div>
+                
+                <div class="language-item">
+                    <h3 class="language-name">Portugués</h3>
+                    <span class="language-level">A1</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="section">
+        <div class="container">
+            <div class="contact-info">
+                <h3>¡Conectemos!</h3>
+                <p>Estoy disponible para nuevas oportunidades y colaboraciones</p>
+                
+                <div class="contact-links">
+                    <a href="#" class="contact-link">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    
+                    <a href="#" class="contact-link">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    
+                    <a href="#" class="contact-link">
+                        <i class="fas fa-globe"></i>
+                        <span>Portfolio Web</span>
+                    </a>
+                    
+                    <a href="mailto:tu-email@ejemplo.com" class="contact-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Remove active class from all links
+                document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+                // Add active class to clicked link
+                this.classList.add('active');
+                
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('.nav');
+            if (window.scrollY > 100) {
+                nav.style.background = 'rgba(255,255,255,0.98)';
+                nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.15)';
+            } else {
+                nav.style.background = 'rgba(255,255,255,0.95)';
+                nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+            }
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animated elements
+        document.querySelectorAll('.experience-item, .skill-category, .education-item, .specialization-item, .certification-item, .language-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
