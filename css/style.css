@@ -997,3 +997,10 @@ body {
     border-radius: 15px;
     font-size: 0.8rem;
 }
+
+.group-tech-key {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+}
