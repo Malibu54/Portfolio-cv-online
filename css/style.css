@@ -982,7 +982,7 @@ body {
     }
 }
 
-#tecnologias-clave {
+.tecnologias-clave {
     background: linear-gradient(45deg, #6366f1, #8b5cf6);
     color: white;
     padding: 4px 10px;
