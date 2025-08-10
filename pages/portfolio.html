@@ -1,307 +1,431 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon" />
     <title>Portafolio - Oriana Galindez</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-</head>
-<body>
-
-        <!-- Header -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
     <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="profile-img">
-                    <i class="fas fa-user-tie"></i>
-                </div>
-                <h1 class="name">Oriana Galíndez</h1>
-                <p class="title">Business Process Expert | Technical Product Manager | Analista Funcional</p>
-                
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/orianasoledad" class="social-link">
-                        <i class="fab fa-linkedin"></i>
-                        LinkedIn
-                    </a>
-                    <a href="https://www.github.com/malibu54" class="social-link">
-                        <i class="fab fa-github"></i>
-                        GitHub
-                    </a>
-                    <a href="/pages/portfolio.html" class="social-link">
-                        <i class="fas fa-globe"></i>
-                        Portfolio
-                    </a>
-                </div>
-            </div>
+      <div class="container">
+        <div class="header-content">
+          <div class="profile-img">
+            <i class="fas fa-user-tie"></i>
+          </div>
+          <h1 class="name">Oriana Galíndez</h1>
+          <p class="title">
+            Business Process Expert | Technical Product Manager | Analista
+            Funcional
+          </p>
+
+          <div class="social-links">
+            <a
+              href="https://www.linkedin.com/in/orianasoledad"
+              class="social-link"
+            >
+              <i class="fab fa-linkedin"></i>
+              LinkedIn
+            </a>
+            <a href="https://www.github.com/malibu54" class="social-link">
+              <i class="fab fa-github"></i>
+              GitHub
+            </a>
+            <a href="/pages/portfolio.html" class="social-link">
+              <i class="fas fa-globe"></i>
+              Portfolio
+            </a>
+          </div>
         </div>
+      </div>
     </header>
 
-        <!-- Navigation -->
+    <!-- Navigation -->
     <nav class="nav">
-        <div class="container">
-            <div class="nav-content">
-                <ul class="nav-links">
-                    <li><a href="/index.html#experiencia" class="nav-link">Experiencia</a></li>
-                    <li><a href="/index.html#habilidades" class="nav-link">Habilidades</a></li>
-                    <li><a href="/index.html#educacion" class="nav-link">Educación</a></li>
-                    <li><a href="/index.html#especializaciones" class="nav-link">Especializaciones</a></li>
-                    <li><a href="/index.html#certificaciones" class="nav-link">Certificaciones</a></li>
-                    <li><a href="/index.html#idiomas" class="nav-link">Idiomas</a></li>
-                    <li><a href="/index.html#contacto" class="nav-link">Contacto</a></li>
-                </ul>
-            </div>
+      <div class="container">
+        <div class="nav-content">
+          <ul class="nav-links">
+            <li>
+              <a href="/index.html#experiencia" class="nav-link">Experiencia</a>
+            </li>
+            <li>
+              <a href="/index.html#habilidades" class="nav-link">Habilidades</a>
+            </li>
+            <li>
+              <a href="/index.html#educacion" class="nav-link">Educación</a>
+            </li>
+            <li>
+              <a href="/index.html#especializaciones" class="nav-link"
+                >Especializaciones</a
+              >
+            </li>
+            <li>
+              <a href="/index.html#certificaciones" class="nav-link"
+                >Certificaciones</a
+              >
+            </li>
+            <li><a href="/index.html#idiomas" class="nav-link">Idiomas</a></li>
+            <li>
+              <a href="/index.html#contacto" class="nav-link">Contacto</a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
- <!-- Portfolio Section -->
+    <!-- Portfolio Section -->
     <section id="proyectos" class="section">
-        <div class="container">
-            <h2 class="section-title">Proyectos</h2>
-            
-            <div class="projects-grid">
-                <!-- Proyecto 1: IA Training (Featured) -->
-                <div class="project-card featured">
-                    <div class="project-preview" onclick="window.open('https://ia-training.netlify.app/', '_blank')">
-                        <img src="https://github.com/Malibu54/Contenido/raw/main/assets/Screenshot%202025-08-10%20113243.png" alt="IA Training Platform">
-                        <div class="project-overlay">
-                            <a href="https://ia-training.netlify.app//" target="_blank" class="external-link">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <div class="project-icon">
-                                <i class="fas fa-brain"></i>
-                            </div>
-                            <div class="project-info">
-                                <h3 class="project-title">IA Training Platform</h3>
-                                <div class="project-type">Aplicación Web de Entrenamiento</div>
-                            </div>
-                            <div class="project-badge">
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                        <p class="project-description">
-                            Plataforma web interactiva para entrenamiento con inteligencia artificial, implementando Material Design y Fluent Design con integración de Claude AI para experiencias de aprendizaje personalizadas.
-                        </p>
-                        <div class="project-tags">
-                            <span class="project-tag">HTML</span>
-                            <span class="project-tag">CSS</span>
-                            <span class="project-tag">JavaScript</span>
-                            <span class="project-tag">Material Design</span>
-                            <span class="project-tag">Claude AI</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://ia-training.netlify.app/" target="_blank" class="project-link primary">
-                                <i class="fas fa-globe"></i> Ver Proyecto
-                            </a>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <h2 class="section-title">Proyectos</h2>
 
-                <!-- Proyecto 2: Google Maps -->
-                <div class="project-card">
-                    <div class="project-preview" onclick="window.open('https://amazingooglemaps.netlify.app/', '_blank')">
-                        <img src="https://github.com/Malibu54/Google-Maps/raw/main/img/Maps.png" alt="Google Maps Integration">
-                        <div class="project-overlay">
-                            <a href="https://amazingooglemaps.netlify.app/" target="_blank" class="external-link">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <div class="project-icon">
-                                <i class="fas fa-map-marked-alt"></i>
-                            </div>
-                            <div class="project-info">
-                                <h3 class="project-title">Google Maps Integration</h3>
-                                <div class="project-type">Aplicación de Mapas</div>
-                            </div>
-                            <div class="project-badge">
-                                <i class="fas fa-map"></i>
-                            </div>
-                        </div>
-                        <p class="project-description">
-                            Aplicación web que integra la API de Google Maps con funcionalidades avanzadas de geolocalización, marcadores personalizados y navegación interactiva desarrollada con JavaScript Vanilla.
-                        </p>
-                        <div class="project-tags">
-                            <span class="project-tag">HTML</span>
-                            <span class="project-tag">CSS</span>
-                            <span class="project-tag">JavaScript Vanilla</span>
-                            <span class="project-tag">Google Maps API</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://amazingooglemaps.netlify.app/" target="_blank" class="project-link primary">
-                                <i class="fas fa-globe"></i> Ver Proyecto
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Proyecto 3: Sistema de Reserva de Vuelos -->
-                <div class="project-card">
-                    <div class="project-preview" onclick="window.open('https://github.com/Malibu54/Sistema-de-reserva-de-Vuelos', '_blank')">
-                        <img src="https://github.com/Malibu54/Sistema-de-reserva-de-Vuelos/raw/main/assets/screenshot.png" alt="Sistema de Reserva de Vuelos">
-                        <div class="project-overlay">
-                            <a href="https://github.com/Malibu54/Sistema-de-reserva-de-Vuelos" target="_blank" class="external-link">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <div class="project-icon">
-                                <i class="fas fa-plane"></i>
-                            </div>
-                            <div class="project-info">
-                                <h3 class="project-title">Sistema de Reserva de Vuelos</h3>
-                                <div class="project-type">Aplicación de Escritorio</div>
-                            </div>
-                            <div class="project-badge">
-                                <i class="fas fa-desktop"></i>
-                            </div>
-                        </div>
-                        <p class="project-description">
-                            Sistema completo de gestión y reserva de vuelos desarrollado en Python con interfaz gráfica Tkinter, incluyendo manejo de fechas, validaciones y gestión de datos de pasajeros.
-                        </p>
-                        <div class="project-tags">
-                            <span class="project-tag">Python</span>
-                            <span class="project-tag">Tkinter</span>
-                            <span class="project-tag">Datetime</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Malibu54/Sistema-de-reserva-de-Vuelos" target="_blank" class="project-link primary">
-                                <i class="fab fa-github"></i> Ver Código
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Proyecto 4: Calculadora -->
-                <div class="project-card">
-                    <div class="project-preview" onclick="window.open('https://malibucalculator.netlify.app/', '_blank')">
-                        <img src="https://github.com/Malibu54/Calculator/raw/main/img/beautifulCalculator.png" alt="Calculadora Web">
-                        <div class="project-overlay">
-                            <a href="https://malibucalculator.netlify.app/" target="_blank" class="external-link">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <div class="project-icon">
-                                <i class="fas fa-calculator"></i>
-                            </div>
-                            <div class="project-info">
-                                <h3 class="project-title">Calculadora Web</h3>
-                                <div class="project-type">Aplicación Web</div>
-                            </div>
-                            <div class="project-badge">
-                                <i class="fas fa-plus-circle"></i>
-                            </div>
-                        </div>
-                        <p class="project-description">
-                            Calculadora web moderna y responsiva con interfaz intuitiva, desarrollada con tecnologías web estándar y funcionalidades matemáticas avanzadas para operaciones básicas y científicas.
-                        </p>
-                        <div class="project-tags">
-                            <span class="project-tag">HTML</span>
-                            <span class="project-tag">CSS</span>
-                            <span class="project-tag">JavaScript Vanilla</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://malibucalculator.netlify.app/" target="_blank" class="project-link primary">
-                                <i class="fas fa-globe"></i> Ver Proyecto
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Proyecto 5: To Do List (Featured) -->
-                <div class="project-card featured">
-                    <div class="project-preview" onclick="window.open('https://todolistmalibu54.netlify.app/', '_blank')">
-                        <img src="https://github.com/Malibu54/toDo-list/raw/main/assets/Con-tareas.png" alt="Lista de Tareas">
-                        <div class="project-overlay">
-                            <a href="https://todolistmalibu54.netlify.app/" target="_blank" class="external-link">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <div class="project-icon">
-                                <i class="fas fa-tasks"></i>
-                            </div>
-                            <div class="project-info">
-                                <h3 class="project-title">To Do List</h3>
-                                <div class="project-type">Gestor de Tareas</div>
-                            </div>
-                            <div class="project-badge">
-                                <i class="fas fa-award"></i>
-                            </div>
-                        </div>
-                        <p class="project-description">
-                            Aplicación web de gestión de tareas con diseño moderno y responsivo, featuring notificaciones SweetAlert2, persistencia con localStorage e interfaz intuitiva para productividad personal.
-                        </p>
-                        <div class="project-tags">
-                            <span class="project-tag">HTML5</span>
-                            <span class="project-tag">CSS3</span>
-                            <span class="project-tag">JavaScript Vanilla</span>
-                            <span class="project-tag">SweetAlert2</span>
-                            <span class="project-tag">LocalStorage</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://todolistmalibu54.netlify.app/" target="_blank" class="project-link primary">
-                                <i class="fas fa-globe"></i> Ver Proyecto
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Proyecto 6: Timer Pomodoro -->
-                <div class="project-card">
-                    <div class="project-preview" onclick="window.open('https://studywithmalibu54.netlify.app/', '_blank')">
-                        <img src="https://github.com/Malibu54/Pomodoro-Timer/raw/main/assets/Screenshot%202025-06-23%20111434.png" alt="Timer Pomodoro">
-                        <div class="project-overlay">
-                            <a href="https://studywithmalibu54.netlify.app/" target="_blank" class="external-link">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <div class="project-icon">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <div class="project-info">
-                                <h3 class="project-title">Timer Pomodoro</h3>
-                                <div class="project-type">Herramienta de Productividad</div>
-                            </div>
-                            <div class="project-badge">
-                                <i class="fas fa-stopwatch"></i>
-                            </div>
-                        </div>
-                        <p class="project-description">
-                            Aplicación web de timer Pomodoro para técnicas de estudio y trabajo, con intervalos personalizables, notificaciones visuales y sonoras, y diseño minimalista para enfocar la concentración.
-                        </p>
-                        <div class="project-tags">
-                            <span class="project-tag">HTML</span>
-                            <span class="project-tag">CSS</span>
-                            <span class="project-tag">JavaScript Vanilla</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://studywithmalibu54.netlify.app/" target="_blank" class="project-link primary">
-                                <i class="fas fa-globe"></i> Ver Proyecto
-                            </a>
-                        </div>
-                    </div>
-                </div>
+        <div class="projects-grid">
+          <!-- Proyecto 1: IA Training (Featured) -->
+          <div class="project-card featured">
+            <div
+              class="project-preview"
+              onclick="window.open('https://ia-training.netlify.app/', '_blank')"
+            >
+              <img
+                src="https://github.com/Malibu54/Contenido/raw/main/assets/Screenshot%202025-08-10%20113243.png"
+                alt="IA Training Platform"
+              />
+              <div class="project-overlay">
+                <a
+                  href="https://ia-training.netlify.app//"
+                  target="_blank"
+                  class="external-link"
+                >
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
             </div>
+            <div class="project-content">
+              <div class="project-header">
+                <div class="project-icon">
+                  <i class="fas fa-brain"></i>
+                </div>
+                <div class="project-info">
+                  <h3 class="project-title">IA Training Platform</h3>
+                  <div class="project-type">
+                    Aplicación Web de Entrenamiento
+                  </div>
+                </div>
+                <div class="project-badge">
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <p class="project-description">
+                Plataforma web interactiva para entrenamiento con inteligencia
+                artificial, implementando Material Design y Fluent Design con
+                integración de Claude AI para experiencias de aprendizaje
+                personalizadas.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">HTML</span>
+                <span class="project-tag">CSS</span>
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">Material Design</span>
+                <span class="project-tag">Claude AI</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://ia-training.netlify.app/"
+                  target="_blank"
+                  class="project-link primary"
+                >
+                  <i class="fas fa-globe"></i> Ver Proyecto
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proyecto 2: Google Maps -->
+          <div class="project-card">
+            <div
+              class="project-preview"
+              onclick="window.open('https://amazingooglemaps.netlify.app/', '_blank')"
+            >
+              <img
+                src="https://github.com/Malibu54/Google-Maps/raw/main/img/Maps.png"
+                alt="Google Maps Integration"
+              />
+              <div class="project-overlay">
+                <a
+                  href="https://amazingooglemaps.netlify.app/"
+                  target="_blank"
+                  class="external-link"
+                >
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <div class="project-icon">
+                  <i class="fas fa-map-marked-alt"></i>
+                </div>
+                <div class="project-info">
+                  <h3 class="project-title">Google Maps Integration</h3>
+                  <div class="project-type">Aplicación de Mapas</div>
+                </div>
+                <div class="project-badge">
+                  <i class="fas fa-map"></i>
+                </div>
+              </div>
+              <p class="project-description">
+                Aplicación web que integra la API de Google Maps con
+                funcionalidades avanzadas de geolocalización, marcadores
+                personalizados y navegación interactiva desarrollada con
+                JavaScript Vanilla.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">HTML</span>
+                <span class="project-tag">CSS</span>
+                <span class="project-tag">JavaScript Vanilla</span>
+                <span class="project-tag">Google Maps API</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://amazingooglemaps.netlify.app/"
+                  target="_blank"
+                  class="project-link primary"
+                >
+                  <i class="fas fa-globe"></i> Ver Proyecto
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proyecto 3: Sistema de Reserva de Vuelos -->
+          <div class="project-card">
+            <div
+              class="project-preview"
+              onclick="window.open('https://github.com/Malibu54/Sistema-de-reserva-de-Vuelos', '_blank')"
+            >
+              <img
+                src="https://github.com/Malibu54/Sistema-de-reserva-de-Vuelos/raw/main/assets/screenshot.png"
+                alt="Sistema de Reserva de Vuelos"
+              />
+              <div class="project-overlay">
+                <a
+                  href="https://github.com/Malibu54/Sistema-de-reserva-de-Vuelos"
+                  target="_blank"
+                  class="external-link"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <div class="project-icon">
+                  <i class="fas fa-plane"></i>
+                </div>
+                <div class="project-info">
+                  <h3 class="project-title">Sistema de Reserva de Vuelos</h3>
+                  <div class="project-type">Aplicación de Escritorio</div>
+                </div>
+                <div class="project-badge">
+                  <i class="fas fa-desktop"></i>
+                </div>
+              </div>
+              <p class="project-description">
+                Sistema completo de gestión y reserva de vuelos desarrollado en
+                Python con interfaz gráfica Tkinter, incluyendo manejo de
+                fechas, validaciones y gestión de datos de pasajeros.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">Tkinter</span>
+                <span class="project-tag">Datetime</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/Malibu54/Sistema-de-reserva-de-Vuelos"
+                  target="_blank"
+                  class="project-link primary"
+                >
+                  <i class="fab fa-github"></i> Ver Código
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proyecto 4: Calculadora -->
+          <div class="project-card">
+            <div
+              class="project-preview"
+              onclick="window.open('https://malibucalculator.netlify.app/', '_blank')"
+            >
+              <img
+                src="https://github.com/Malibu54/Calculator/raw/main/img/beautifulCalculator.png"
+                alt="Calculadora Web"
+              />
+              <div class="project-overlay">
+                <a
+                  href="https://malibucalculator.netlify.app/"
+                  target="_blank"
+                  class="external-link"
+                >
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <div class="project-icon">
+                  <i class="fas fa-calculator"></i>
+                </div>
+                <div class="project-info">
+                  <h3 class="project-title">Calculadora Web</h3>
+                  <div class="project-type">Aplicación Web</div>
+                </div>
+                <div class="project-badge">
+                  <i class="fas fa-plus-circle"></i>
+                </div>
+              </div>
+              <p class="project-description">
+                Calculadora web moderna y responsiva con interfaz intuitiva,
+                desarrollada con tecnologías web estándar y funcionalidades
+                matemáticas avanzadas para operaciones básicas y científicas.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">HTML</span>
+                <span class="project-tag">CSS</span>
+                <span class="project-tag">JavaScript Vanilla</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://malibucalculator.netlify.app/"
+                  target="_blank"
+                  class="project-link primary"
+                >
+                  <i class="fas fa-globe"></i> Ver Proyecto
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proyecto 5: To Do List (Featured) -->
+          <div class="project-card featured">
+            <div
+              class="project-preview"
+              onclick="window.open('https://todolistmalibu54.netlify.app/', '_blank')"
+            >
+              <img
+                src="https://github.com/Malibu54/toDo-list/raw/main/assets/Con-tareas.png"
+                alt="Lista de Tareas"
+              />
+              <div class="project-overlay">
+                <a
+                  href="https://todolistmalibu54.netlify.app/"
+                  target="_blank"
+                  class="external-link"
+                >
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <div class="project-icon">
+                  <i class="fas fa-tasks"></i>
+                </div>
+                <div class="project-info">
+                  <h3 class="project-title">To Do List</h3>
+                  <div class="project-type">Gestor de Tareas</div>
+                </div>
+                <div class="project-badge">
+                  <i class="fas fa-award"></i>
+                </div>
+              </div>
+              <p class="project-description">
+                Aplicación web de gestión de tareas con diseño moderno y
+                responsivo, featuring notificaciones SweetAlert2, persistencia
+                con localStorage e interfaz intuitiva para productividad
+                personal.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">HTML5</span>
+                <span class="project-tag">CSS3</span>
+                <span class="project-tag">JavaScript Vanilla</span>
+                <span class="project-tag">SweetAlert2</span>
+                <span class="project-tag">LocalStorage</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://todolistmalibu54.netlify.app/"
+                  target="_blank"
+                  class="project-link primary"
+                >
+                  <i class="fas fa-globe"></i> Ver Proyecto
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proyecto 6: Timer Pomodoro -->
+          <div class="project-card">
+            <div
+              class="project-preview"
+              onclick="window.open('https://studywithmalibu54.netlify.app/', '_blank')"
+            >
+              <img
+                src="https://github.com/Malibu54/Pomodoro-Timer/raw/main/assets/Screenshot%202025-06-23%20111434.png"
+                alt="Timer Pomodoro"
+              />
+              <div class="project-overlay">
+                <a
+                  href="https://studywithmalibu54.netlify.app/"
+                  target="_blank"
+                  class="external-link"
+                >
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <div class="project-icon">
+                  <i class="fas fa-clock"></i>
+                </div>
+                <div class="project-info">
+                  <h3 class="project-title">Timer Pomodoro</h3>
+                  <div class="project-type">Herramienta de Productividad</div>
+                </div>
+                <div class="project-badge">
+                  <i class="fas fa-stopwatch"></i>
+                </div>
+              </div>
+              <p class="project-description">
+                Aplicación web de timer Pomodoro para técnicas de estudio y
+                trabajo, con intervalos personalizables, notificaciones visuales
+                y sonoras, y diseño minimalista para enfocar la concentración.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">HTML</span>
+                <span class="project-tag">CSS</span>
+                <span class="project-tag">JavaScript Vanilla</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://studywithmalibu54.netlify.app/"
+                  target="_blank"
+                  class="project-link primary"
+                >
+                  <i class="fas fa-globe"></i> Ver Proyecto
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
-    
-</body>
+  </body>
 </html>
