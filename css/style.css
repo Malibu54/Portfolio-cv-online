@@ -981,3 +981,11 @@ body {
         text-align: center;
     }
 }
+
+#tecnologias-clave {
+    background: linear-gradient(45deg, #6366f1, #8b5cf6);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+}
